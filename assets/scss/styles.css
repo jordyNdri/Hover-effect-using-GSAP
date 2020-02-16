@@ -1,0 +1,219 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #161616;
+    color: wheat;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;   
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+.text-autor {
+    text-decoration: underline;
+}
+.text-descrip {
+    font-size: medium;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+/* desing progress bar */
+.progressbar {
+    position: fixed;
+    top: 0;
+    left: 85%;
+    background: rgba(255, 255, 255, 0.4);
+    width: 1px;
+    z-index: 1;
+}
+
+/* espacement en haut, en bas du contenu */
+.navigation-wrapper ul {
+    margin-top: 0rem;
+    margin-left: 2rem;
+    margin-bottom: 0rem;
+    list-style: none;
+    position: absolute;
+}
+
+/* design de chaque item */
+.navigation-item {
+    display: block;
+    user-select: none;
+    margin: 120px 0;
+
+    width: 100%;
+}
+/* design text pour chaque item */
+a {
+    /* font-family: "Cozi Azure"; */
+    font-family: fantasy;
+    font-weight: 600;
+    font-size: 100px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+}
+span {
+    position: relative;
+    display: block;
+}
+
+/* design transition color text */
+.navigation-item span::before {
+    width: 0;
+    color: white;
+    overflow: hidden;
+    position: absolute;
+    content: attr(data-text);
+    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+    /* transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045); */
+}
+.navigation-item span:hover:before {
+    width: 100%;
+}
+.navigation-item span:hover {
+    color: white;
+    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+}
+
+/*  */
+.project-preview-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.project-preview {
+    position: fixed;
+    top: 12%;
+    left: 50%;
+
+    width: 70%;
+    height: 80%;
+
+    background-size: contain;
+    overflow: hidden;
+}
+.project-preview-img1 {
+    position: fixed;
+    top: 12%;
+    left: 50%;
+
+    /* width: 0; */
+    /* height: 440px; */
+    width: 50%;
+    height: 80%;
+
+    background: url(../images/téléchargement\ \(1\).png) no-repeat 100% 100%;
+    background-size: contain;
+    overflow: hidden;
+    
+    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+}
+/* REACT JS */
+.project-preview-img2 {
+    position: fixed;
+    top: 12%;
+    left: 50%;
+
+    /* width: 0; */
+    /* height: 440px; */
+    width: 50%;
+    height: 80%;
+
+    background: url(../images/téléchargement\ \(3\).png) no-repeat 100% 100%;
+    background-size: contain;
+    overflow: hidden;
+
+    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+}
+/* HTML 5 */
+.project-preview-img3 {
+    position: fixed;
+    top: 12%;
+    left: 50%;
+
+    /* width: 0; */
+    /* height: 440px; */
+    width: 50%;
+    height: 80%;
+
+    background: url(../images/téléchargement\ \(4\).png) no-repeat 100% 100%;
+    background-size: contain;
+    overflow: hidden;
+
+    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+}
+/* CSS */
+.project-preview-img4 { 
+    position: fixed;
+    top: 12%;
+    left: 50%;
+
+    /* width: 0; */
+    /* height: 440px; */
+    width: 50%;
+    height: 80%;
+
+    background: url(../images/téléchargement\ \(5\).png) no-repeat 100% 100%;
+    background-size: contain;
+    overflow: hidden;
+
+    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+}
+/* IONIC */
+.project-preview-img5 {
+    position: fixed;
+    top: 12%;
+    left: 50%;
+
+    /* width: 0; */
+    /* height: 440px; */
+    width: 50%;
+    height: 80%;
+
+    background: url(../images/téléchargement\ \(6\).png) no-repeat 100% 100%;
+    background-size: contain;
+    overflow: hidden;
+
+    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+}
+/* GULP */
+.project-preview-img6 {
+    position: fixed;
+    top: 12%;
+    left: 50%;
+
+    /* width: 0; */
+    /* height: 440px; */
+    width: 50%;
+    height: 80%;
+
+    background: url(../images/téléchargement\ copie.png) no-repeat 100% 100%;
+    background-size: contain;
+    overflow: hidden;
+
+    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+}
+
+@media (max-width: 900px) {
+    .progressbar,
+    .project-preview-wrapper {
+        display: none;
+    }
+    a {
+        font-size: 24px;
+    }
+}
